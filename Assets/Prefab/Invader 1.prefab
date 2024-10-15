@@ -53,12 +53,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c3a5a27dfa98b0945a4ea37122802cd0, type: 3}
     - target: {fileID: 3126246946010848552, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3126246946010848552, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
       propertyPath: m_Color.b
-      value: 0.08524513
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3126246946010848552, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3126246946010848552, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
       propertyPath: m_Color.r
@@ -115,11 +119,11 @@ PrefabInstance:
     - target: {fileID: 5396009754614592562, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
       propertyPath: animationSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: c3a5a27dfa98b0945a4ea37122802cd0, type: 3}
+      objectReference: {fileID: 21300000, guid: b10604f2fd46da54288cfd4b53d16260, type: 3}
     - target: {fileID: 5396009754614592562, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
       propertyPath: animationSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: ccc1ae3e8c9db964bb8b1446fa5e3e21, type: 3}
+      objectReference: {fileID: 21300000, guid: ad91a91e29f607d4bafe243c4896d369, type: 3}
     - target: {fileID: 5408517172493273581, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
       propertyPath: m_Name
       value: Invader 1
