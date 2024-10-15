@@ -602,6 +602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPrefab: {fileID: 5804928324456322066, guid: bd50b798d60e2b345b2dd1d0d9d2be47, type: 3}
+  ShootCD: 0.5
+  lastShootTIme: 0
 --- !u!1 &633067690
 GameObject:
   m_ObjectHideFlags: 0
