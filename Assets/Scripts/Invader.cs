@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -10,7 +11,10 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 
 public class Invader : MonoBehaviour
+
+
 {
+    public int ScoreValue = 100;
     public Sprite[] animationSprites = new Sprite[2];
     public float animationTime;
   
@@ -62,6 +66,7 @@ public class Invader : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         Die();
         if (collision.gameObject.layer == LayerMask.NameToLayer("Lazer"))
         {

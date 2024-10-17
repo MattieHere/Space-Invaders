@@ -2,12 +2,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Timeline.Actions;
+using System.Drawing;
 
 [DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
+    public PointManager pointmanager;
     private Player player;
     private Invaders invaders;
     private MysteryShip mysteryShip;
@@ -108,6 +109,8 @@ public class GameManager : MonoBehaviour
 
     public void OnInvaderKilled(Invader invader)
     {
+        pointmanager = GameObject.Find("PointManager").GetComponent<PointManager>();
+        pointmanager.UpdateScore(100);
         invader.gameObject.SetActive(false);
 
        
