@@ -16,6 +16,12 @@ public class Player : MonoBehaviour
     public float ShootCD = 0.5f;
     public float lastShootTIme;
 
+    GameObject shield;
+
+
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -56,5 +62,12 @@ public class Player : MonoBehaviour
         {
             GameManager.Instance.OnPlayerKilled(this);
         }
+        
+  
+
     }
+
+
+
+
 }
