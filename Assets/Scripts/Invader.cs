@@ -72,7 +72,7 @@ public class Invader : MonoBehaviour
         {
            
             GameManager.Instance.OnInvaderKilled(this);
-        }
+        }   
         else if(collision.gameObject.layer == LayerMask.NameToLayer("Boundary")) //nått nedre kanten
         {
             GameManager.Instance.OnBoundaryReached();
