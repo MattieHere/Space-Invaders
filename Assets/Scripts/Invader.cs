@@ -17,7 +17,7 @@ public class Invader : MonoBehaviour
     public int ScoreValue = 100;
     public Sprite[] animationSprites = new Sprite[2];
     public float animationTime;
-  
+    public GameObject EnemyParticle;
 
     SpriteRenderer spRend;
     int animationFrame;
@@ -70,7 +70,10 @@ public class Invader : MonoBehaviour
         Die();
         if (collision.gameObject.layer == LayerMask.NameToLayer("Lazer"))
         {
-           
+
+            Instantiate(EnemyParticle, transform.position, Quaternion.identity);
+            SoundScript.PlaySound("EnemyDeath");
+            GameObject.Find("Main Camera").GetComponent<ScreemShake>().shake = 3f;
             GameManager.Instance.OnInvaderKilled(this);
         }   
         else if(collision.gameObject.layer == LayerMask.NameToLayer("Boundary")) //nått nedre kanten

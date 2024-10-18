@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= lastShootTIme + ShootCD)
         {
+            SoundScript.PlaySound("fire");
             laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
             lastShootTIme = Time.time;
         }
