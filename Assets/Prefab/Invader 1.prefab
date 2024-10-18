@@ -137,6 +137,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5396009754614592562, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
+      propertyPath: EnemyParticle
+      value: 
+      objectReference: {fileID: 5898003593071382860, guid: eff3425afb023cb40a43a261637cd760, type: 3}
+    - target: {fileID: 5396009754614592562, guid: b66e76c2f0b4e4641a09a5e86a793a5b, type: 3}
       propertyPath: animationTime
       value: 1
       objectReference: {fileID: 0}
