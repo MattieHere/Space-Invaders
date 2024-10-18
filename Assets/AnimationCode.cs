@@ -5,13 +5,13 @@ public class SpriteLooper : MonoBehaviour
 {
     public Sprite[] sprites;
     public float frameRate = 0.1f; 
-    private Image imageComponent; 
+    private Image image; 
     private int currentFrame;
     private float timer;
 
     void Start()
     {
-        imageComponent = GetComponent<Image>();
+        image = GetComponent<Image>();
         currentFrame = 0;
         timer = 0f;
     }
@@ -24,7 +24,7 @@ public class SpriteLooper : MonoBehaviour
         {
             timer = 0f;
             currentFrame = (currentFrame + 1) % sprites.Length;
-            imageComponent.sprite = sprites[currentFrame];
+            image.sprite = sprites[currentFrame];
         }
     }
 }
