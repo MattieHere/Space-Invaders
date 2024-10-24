@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundScript : MonoBehaviour
 {
 
-    public static AudioClip EnemyDeathSound, FireSound;
+    public static AudioClip EnemyDeathSound, FireSound, E;
     static AudioSource AudioS;
 
 
@@ -14,6 +14,7 @@ public class SoundScript : MonoBehaviour
     {
         FireSound = Resources.Load<AudioClip>("fire");
         EnemyDeathSound = Resources.Load<AudioClip>("EnemyDeath");
+        E= Resources.Load<AudioClip>("E");
 
         AudioS = GetComponent<AudioSource>();
     }
@@ -27,6 +28,9 @@ public class SoundScript : MonoBehaviour
                 break;
             case "EnemyDeath":
                 AudioS.PlayOneShot(EnemyDeathSound);
+                break;
+            case "E":
+                AudioS.PlayOneShot(E);
                 break;
         }
     }

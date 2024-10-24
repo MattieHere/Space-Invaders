@@ -5,7 +5,7 @@ using UnityEngine;
 public class Alien : MonoBehaviour
 {
     public GameObject[] PowerUps;
-    public float dropChance = 0.2f;
+    public float dropChance = 1f;
 
    public void OnAlienDeath()
     {

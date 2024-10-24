@@ -8,6 +8,8 @@ public class MysteryShip : MonoBehaviour
     float speed = 5f;
     float cycleTime = 5f;
 
+    public GameObject EnemyParticle;
+
     Vector2 leftDestination;
     Vector2 rightDestination;
     int direction = -1;
@@ -85,6 +87,9 @@ public class MysteryShip : MonoBehaviour
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
+            //Skapar ljud och partiklar på död/Achitphon
+            Instantiate(EnemyParticle, transform.position, Quaternion.identity);
+            SoundScript.PlaySound("EnemyDeath");
             SetInvisible();
             GameManager.Instance.OnMysteryShipKilled(this);
         }

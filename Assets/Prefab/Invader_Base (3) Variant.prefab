@@ -175,6 +175,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PowerUps:
   - {fileID: 669996115125239639, guid: f2524aa357407d345a7c8534a67998c1, type: 3}
-  - {fileID: 6509236945956984796, guid: e5182a0555404d94e8aa41a8d997701b, type: 3}
-  - {fileID: 749679113664765114, guid: 181b25b9df44aef45b880bb0d60776c0, type: 3}
-  dropChance: 0.2
+  dropChance: 1

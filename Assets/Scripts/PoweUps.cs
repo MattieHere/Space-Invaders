@@ -8,8 +8,8 @@ public class PoweUps : MonoBehaviour
     public enum PowerUpType
     {
         DS,
-        HM,
-        MG,
+
+        
 
     }
     public PowerUpType powerUpType;
@@ -17,6 +17,7 @@ public class PoweUps : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SoundScript.PlaySound("E");
             ApplyPowerUp(collision.gameObject);
             Destroy(gameObject);
 

@@ -68,9 +68,9 @@ public class Invader : MonoBehaviour
     {
         
         Die();
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Lazer"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
-
+            //Skapar ljud och partiklar på död/Achitphon
             Instantiate(EnemyParticle, transform.position, Quaternion.identity);
             SoundScript.PlaySound("EnemyDeath");
             GameObject.Find("Main Camera").GetComponent<ScreemShake>().shake = 3f;
