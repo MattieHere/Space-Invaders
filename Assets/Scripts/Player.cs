@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
@@ -45,8 +45,10 @@ public class Player : MonoBehaviour
             laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
             lastShootTIme = Time.time;
         }
+
+
     }
-   public IEnumerator ActiveDS()
+    public IEnumerator ActiveDS()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= lastShootTIme + ShootCD)
         {
@@ -62,9 +64,11 @@ public class Player : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Missile") || collision.gameObject.layer == LayerMask.NameToLayer("Invader"))
         {
             GameManager.Instance.OnPlayerKilled(this);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
-        
-  
+
+
 
     }
 
